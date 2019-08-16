@@ -155,6 +155,7 @@ class ViewController: UIViewController {
 
                 // 最後の人までボタンを押したら画面遷移する
                 if selectedCardCount >= personList.count {
+                    //画面遷移
                     if likedName.isEmpty { // 誰に対してもいいねを押さなかったとき
                         performSegue(withIdentifier: "NoLikeList", sender: nil)
                     } else { // 一人以上はいいねを押しているとき
@@ -177,6 +178,8 @@ class ViewController: UIViewController {
                 likeImage.isHidden = true
                 // いいねリストに追加
                 likedName.append(nameList[selectedCardCount])
+                likedJob.append(jobList[selectedCardCount])
+                likedFrom.append(fromList[selectedCardCount])
                 // 次のカードへ
                 selectedCardCount += 1
                 
@@ -214,6 +217,7 @@ class ViewController: UIViewController {
         selectedCardCount += 1
         // 画面遷移
         if selectedCardCount >= personList.count {
+            
             if likedName.isEmpty { // 誰に対してもいいねを押さなかったとき
                 performSegue(withIdentifier: "NoLikeList", sender: nil)
             } else { // 一人以上はいいねを押しているとき
