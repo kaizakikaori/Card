@@ -13,6 +13,8 @@
 		DD8AFB7E22FE43A7005AFD25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD8AFB7D22FE43A7005AFD25 /* Assets.xcassets */; };
 		DD8AFB8122FE43A7005AFD25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD8AFB7F22FE43A7005AFD25 /* LaunchScreen.storyboard */; };
 		DD8AFB8922FE9262005AFD25 /* LikedListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8AFB8822FE9262005AFD25 /* LikedListTableViewController.swift */; };
+		E99B8F5023068E3A0050CBC0 /* XIBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99B8F4F23068E3A0050CBC0 /* XIBTableViewCell.swift */; };
+		E99B8F52230690260050CBC0 /* XIBTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E99B8F51230690260050CBC0 /* XIBTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DD8AFB8022FE43A7005AFD25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD8AFB8222FE43A7005AFD25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD8AFB8822FE9262005AFD25 /* LikedListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedListTableViewController.swift; sourceTree = "<group>"; };
+		E99B8F4F23068E3A0050CBC0 /* XIBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBTableViewCell.swift; sourceTree = "<group>"; };
+		E99B8F51230690260050CBC0 /* XIBTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				DD8AFB7D22FE43A7005AFD25 /* Assets.xcassets */,
 				DD8AFB7F22FE43A7005AFD25 /* LaunchScreen.storyboard */,
 				DD8AFB8222FE43A7005AFD25 /* Info.plist */,
+				E99B8F4F23068E3A0050CBC0 /* XIBTableViewCell.swift */,
+				E99B8F51230690260050CBC0 /* XIBTableViewCell.xib */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E99B8F52230690260050CBC0 /* XIBTableViewCell.xib in Resources */,
 				DD8AFB8122FE43A7005AFD25 /* LaunchScreen.storyboard in Resources */,
 				DD8AFB7E22FE43A7005AFD25 /* Assets.xcassets in Resources */,
 				DD8AFB7C22FE43A6005AFD25 /* Main.storyboard in Resources */,
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD8AFB8922FE9262005AFD25 /* LikedListTableViewController.swift in Sources */,
+				E99B8F5023068E3A0050CBC0 /* XIBTableViewCell.swift in Sources */,
 				DD8AFB7922FE43A6005AFD25 /* ViewController.swift in Sources */,
 				DD8AFB7722FE43A6005AFD25 /* AppDelegate.swift in Sources */,
 			);

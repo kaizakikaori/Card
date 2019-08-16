@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--いいねしよう-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Card" customModuleProvider="target" sceneMemberID="viewController">
@@ -306,7 +306,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OAo-se-P3x"/>
+                    <navigationItem key="navigationItem" title="いいねしよう" id="OAo-se-P3x">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Sia-s4-Rwf"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="baseCard" destination="KFX-1B-6vk" id="kN8-3M-3dm"/>
                         <outlet property="likeImage" destination="Njy-qQ-WMP" id="BEp-4f-DE6"/>
@@ -315,7 +317,8 @@
                         <outlet property="person3" destination="z7e-RI-Hzf" id="Oho-Qt-T4J"/>
                         <outlet property="person4" destination="zuF-6g-1Pp" id="D8N-UN-vXe"/>
                         <outlet property="person5" destination="Me7-7N-lAE" id="zLB-ia-IXM"/>
-                        <segue destination="HJZ-Rr-xTd" kind="show" identifier="ToLikedList" id="e2h-Zu-Eti"/>
+                        <segue destination="Ncn-Ma-Lre" kind="show" identifier="NoLikeList" id="qke-px-GzK"/>
+                        <segue destination="HJZ-Rr-xTd" kind="show" identifier="ToLikedList" id="YmO-oe-SmX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -336,7 +339,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="Cell" id="BUs-M1-CNV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="XIBCell" id="BUs-M1-CNV" customClass="XIBTableViewCell" customModule="Card" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BUs-M1-CNV" id="8Cw-xl-Q1z">
@@ -354,6 +357,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMe-KE-aho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1628.985507246377" y="35.491071428571423"/>
+        </scene>
+        <!--いいねリスト-->
+        <scene sceneID="3BI-7k-cVa">
+            <objects>
+                <viewController id="Ncn-Ma-Lre" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oAZ-Hc-SmY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="津田" translatesAutoresizingMaskIntoConstraints="NO" id="d9d-yw-56D">
+                                <rect key="frame" x="95" y="336" width="225" height="225"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="いいね!をした人はいません" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrw-yd-goJ">
+                                <rect key="frame" x="82" y="569" width="251" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d9d-yw-56D" firstAttribute="centerY" secondItem="oAZ-Hc-SmY" secondAttribute="centerY" id="82H-fQ-5gH"/>
+                            <constraint firstItem="hrw-yd-goJ" firstAttribute="centerX" secondItem="oAZ-Hc-SmY" secondAttribute="centerX" id="gbW-UT-5Ob"/>
+                            <constraint firstItem="d9d-yw-56D" firstAttribute="centerX" secondItem="oAZ-Hc-SmY" secondAttribute="centerX" id="jYl-sa-n6N"/>
+                            <constraint firstItem="hrw-yd-goJ" firstAttribute="top" secondItem="d9d-yw-56D" secondAttribute="bottom" constant="10" id="pLO-cj-edR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fOs-e8-w27"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="いいねリスト" id="q0Y-h4-z5N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5lX-GR-qBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="762"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hzP-sD-MWY">
@@ -381,6 +417,7 @@
         <image name="バツ" width="256" height="256"/>
         <image name="ハート" width="256" height="256"/>
         <image name="板垣退助" width="383" height="400"/>
+        <image name="津田" width="183" height="275"/>
         <image name="津田梅子" width="373" height="400"/>
     </resources>
 </document>
